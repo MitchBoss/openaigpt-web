@@ -90,7 +90,7 @@ const gpt432k = {
 
 export const chatModels : Record<string, ModelDetail> = {
   'gpt-3.5-turbo': { ...gpt35 },
-  'gpt4-1106-preview': {...gpt4120kpreview},
+  'gpt-4-1106-preview': {...gpt4120kpreview},
   'gpt-3.5-turbo-0301': { ...gpt35 },
   'gpt-3.5-turbo-0613': { ...gpt35 },
   'gpt-3.5-turbo-16k': { ...gpt3516k },
@@ -134,6 +134,14 @@ export const imageModels : Record<string, ModelDetail> = {
         completion: 0.016, // $0.016 per image
         opt: {
           size: '256x256'
+        }
+      },
+      'dall-e-3-1024x1024': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.016, // $0.016 per image
+        opt: {
+          size: '1024x1024'
         }
       }
 }
