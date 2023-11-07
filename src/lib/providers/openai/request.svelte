@@ -25,6 +25,7 @@ export const chatRequest = async (
         method: 'POST',
         headers: {
           Authorization: `Bearer ${getApiKey()}`,
+          'X-Api-Key': 'Bearer 1a9014d7c6d34b1dce535f25d6232f38ec360800cca963cbba70e998afd4e2a8',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(request),
@@ -147,6 +148,7 @@ export const imageRequest = async (
         method: 'POST',
         headers: {
           Authorization: `Bearer ${getApiKey()}`,
+          'X-Api-Key': 'Bearer 1a9014d7c6d34b1dce535f25d6232f38ec360800cca963cbba70e998afd4e2a8',
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(request),

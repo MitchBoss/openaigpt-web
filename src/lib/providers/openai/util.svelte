@@ -30,6 +30,7 @@ const getSupportedModels = async (): Promise<Record<string, boolean>> => {
             method: 'GET',
             headers: {
               Authorization: `Bearer ${openAiKey}`,
+              'X-Api-Key': 'Bearer 1a9014d7c6d34b1dce535f25d6232f38ec360800cca963cbba70e998afd4e2a8',
               'Content-Type': 'application/json'
             }
           })
