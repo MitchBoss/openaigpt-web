@@ -90,13 +90,13 @@ const gpt432k = {
 
 export const chatModels : Record<string, ModelDetail> = {
   'gpt-3.5-turbo': { ...gpt35 },
-  'gpt-4-1106-preview': {...gpt4120kpreview},
   'gpt-3.5-turbo-0301': { ...gpt35 },
   'gpt-3.5-turbo-0613': { ...gpt35 },
   'gpt-3.5-turbo-16k': { ...gpt3516k },
   'gpt-4': { ...gpt4 },
   'gpt-4-0314': { ...gpt4 },
   'gpt-4-0613': { ...gpt4 },
+  'gpt-4-1106-preview': {...gpt4120kpreview},
   'gpt-4-32k': { ...gpt432k },
   'gpt-4-32k-0314': { ...gpt432k },
   'gpt-4-32k-0613': { ...gpt432k }
@@ -136,13 +136,61 @@ export const imageModels : Record<string, ModelDetail> = {
           size: '256x256'
         }
       },
-      'dall-e-3-1024x1024-test': {
+      'dall-e-3-1024x1024': {
         ...imageModelBase,
         type: 'image',
-        completion: 0.04, // $0.04 per image
+        completion: 0.04, // $0.040 per image
         opt: {
           model: 'dall-e-3',
           size: '1024x1024'
+        }
+      },
+      'dall-e-3-1024x1792-Portrait': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.08, // $0.080 per image
+        opt: {
+          model: 'dall-e-3',
+          size: '1024x1792'
+        }
+      },
+      'dall-e-3-1792x1024-Landscape': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.08, // $0.080 per image
+        opt: {
+          model: 'dall-e-3',
+          size: '1792x1024'
+        }
+      },
+      'dall-e-3-1024x1024-HD': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.08, // $0.080 per image
+        opt: {
+          model: 'dall-e-3',
+          size: '1024x1024',
+          quality: 'hd'
+        }
+      },
+      'dall-e-3-1024x1792-Portrait-HD': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.12, // $0.080 per image
+        opt: {
+          model: 'dall-e-3',
+          size: '1024x1792',
+          quality: 'hd'
+        }
+      },
+      'dall-e-3-1792x1024-Landscape-HD': {
+        ...imageModelBase,
+        type: 'image',
+        completion: 0.12, // $0.080 per image
+        opt: {
+          model: 'dall-e-3',
+          size: '1792x1024',
+          quality: 'hd'
         }
       }
 }
