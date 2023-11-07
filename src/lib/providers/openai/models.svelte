@@ -136,11 +136,12 @@ export const imageModels : Record<string, ModelDetail> = {
           size: '256x256'
         }
       },
-      'dall-e-3-1024x1024': {
+      'dall-e-3-1024x1024-test': {
         ...imageModelBase,
         type: 'image',
-        completion: 0.016, // $0.016 per image
+        completion: 0.04, // $0.04 per image
         opt: {
+          model: 'dall-e-3',
           size: '1024x1024'
         }
       }

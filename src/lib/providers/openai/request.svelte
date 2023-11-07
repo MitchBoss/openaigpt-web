@@ -101,6 +101,7 @@ type RequestImageGeneration = {
     prompt: string;
     n?: number;
     size?: string;
+    model?: string;
     response_format?: keyof ResponseImageDetail;
   }
 
@@ -118,8 +119,10 @@ export const imageRequest = async (
   const imageModel = chatSettings.imageGenerationModel
   const imageModelDetail = getModelDetail(imageModel)
   const size = imageModelDetail.opt?.size || '256x256'
+  const model = imageModelDetail.opt?.model || 'dall-e-3'
   const request: RequestImageGeneration = {
         prompt,
+        model: imageModelDetail.opt?.model, //set the model in the request
         response_format: 'b64_json',
         size,
         n: count
