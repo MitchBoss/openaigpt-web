@@ -31,7 +31,7 @@ const getSupportedModels = async (): Promise<Record<string, boolean>> => {
             headers: {
               Authorization: `Bearer ${openAiKey}`,
               'X-Api-Key': 'Bearer e355aee7102495542aec6ea0f6580eac14308bad6932b604f90da5bf8cc08d74',
-              'X-User-Id': 'myuser@TextGPT.XPN.com',
+              'X-User-Id': 'From-util.svelte',
               'Content-Type': 'application/json'
             }
           })
