@@ -71,14 +71,14 @@ const hideModelSetting = (chatId, setting) => {
 }
 
 const gptDefaults = {
-  model: '',
+  model: 'gpt-4-1106-preview',
   messages: [],
   temperature: 1,
   top_p: 1,
   n: 1,
   stream: true,
   stop: null,
-  max_tokens: 512,
+  max_tokens: 4096,
   presence_penalty: 0,
   frequency_penalty: 0,
   logit_bias: null,
